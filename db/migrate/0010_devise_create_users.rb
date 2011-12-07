@@ -7,6 +7,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.trackable
       t.token_authenticatable
 
+      t.boolean :active
+      
       t.string :ido_id
       t.string :first_name
       t.string :last_name

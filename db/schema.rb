@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "authentication_token"
+    t.boolean  "active"
     t.string   "ido_id"
     t.string   "first_name"
     t.string   "last_name"
