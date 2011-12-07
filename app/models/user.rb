@@ -1,14 +1,31 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+
+  devise :trackable, :validatable, :bushido_authenticatable,
+         :token_authenticatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :active, :ido_id
+
+  attr_accessor :password
 
   validates_presence_of :email
   validates_presence_of :ido_id
 
+  before_validation Proc.new { |user| user.password ||= "asdfjalsdjfkalsdf" }
+  before_validation Proc.new { |user| user.active   ||= true }
+
   has_many :posts
+
+  def active?
+    !!active
+  end
+
+  def disable!
+    self.active = false
+    save
+  end
+
+  def inactive_method
+    "Sorry, your account isn't active for this app"
+  end
 end

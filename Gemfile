@@ -21,15 +21,12 @@ gem 'rest-client'
 gem 'aws-s3'
 
 # Misc. gems
-gem 'bushido'
+gem 'bushido', :path => "../bushidogem"
 gem 'uuid'
 gem 'awesome_print'
 
 # Assets
 gem 'sprockets'
-gem 'jammit'
-gem 'closure-compiler'
-gem 'yui-compressor'
 gem 'compass', '>= 0.10.6'
 gem 'compass-colors'
 gem 'fancy-buttons'
@@ -54,6 +51,7 @@ group :development, :test do
   gem 'ci_reporter'
   gem 'no_peeping_toms', :git => 'git://github.com/alindeman/no_peeping_toms.git'
   gem 'watchr'
+  gem 'tane', :path => '../tane'
 end
 
 group :test do

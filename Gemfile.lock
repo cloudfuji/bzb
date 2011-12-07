@@ -15,13 +15,28 @@ GIT
       activerecord (>= 3.0.0)
       activesupport (>= 3.0.0)
 
+PATH
+  remote: ../bushidogem
+  specs:
+    bushido (0.0.35)
+      highline (>= 1.6.1)
+      json (>= 1.4.6)
+      orm_adapter (~> 0.0.3)
+      rest-client (>= 1.6.1)
+
+PATH
+  remote: ../tane
+  specs:
+    tane (0.0.1)
+      awesome_print
+      erubis
+      highline
+      rake
+      rest-client
+
 GEM
   remote: http://rubygems.org/
   specs:
-    POpen4 (0.1.4)
-      Platform (>= 0.4.0)
-      open4
-    Platform (0.4.0)
     ZenTest (4.5.0)
     abstract (1.0.0)
     actionmailer (3.0.11)
@@ -64,11 +79,6 @@ GEM
       xml-simple
     bcrypt-ruby (3.0.1)
     builder (2.1.2)
-    bushido (0.0.35)
-      highline (>= 1.6.1)
-      json (>= 1.4.6)
-      orm_adapter (~> 0.0.3)
-      rest-client (>= 1.6.1)
     cancan (1.6.7)
     capybara (1.1.2)
       mime-types (>= 1.16)
@@ -84,7 +94,6 @@ GEM
     chunky_png (1.2.5)
     ci_reporter (1.6.5)
       builder (>= 2.1.2)
-    closure-compiler (1.1.4)
     columnize (0.3.5)
     compass (0.11.5)
       chunky_png (~> 1.2)
@@ -124,8 +133,6 @@ GEM
     highline (1.6.8)
     hike (1.2.1)
     i18n (0.5.0)
-    jammit (0.6.5)
-      yui-compressor (>= 0.9.3)
     jasmine (1.1.2)
       jasmine-core (>= 1.1.0)
       rack (>= 1.1)
@@ -145,7 +152,6 @@ GEM
     mime-types (1.17.2)
     multi_json (1.0.4)
     nokogiri (1.5.0)
-    open4 (1.3.0)
     orm_adapter (0.0.5)
     pg (0.11.0)
     polyglot (0.3.3)
@@ -263,8 +269,6 @@ GEM
     xpath (0.1.4)
       nokogiri (~> 1.3)
     yamler (0.1.0)
-    yui-compressor (0.9.6)
-      POpen4 (>= 0.1.4)
 
 PLATFORMS
   ruby
@@ -275,12 +279,11 @@ DEPENDENCIES
   autotest-rails
   awesome_print
   aws-s3
-  bushido
+  bushido!
   cancan
   capybara
   capybara-webkit
   ci_reporter
-  closure-compiler
   compass (>= 0.10.6)
   compass-colors
   cover_me (>= 1.0.0.rc6)
@@ -290,7 +293,6 @@ DEPENDENCIES
   factory_girl_rails
   fancy-buttons
   foreman
-  jammit
   jasmine
   json (>= 1.4.6)
   no_peeping_toms!
@@ -307,8 +309,8 @@ DEPENDENCIES
   shoulda-matchers
   sprockets
   sqlite3-ruby
+  tane!
   uuid
   vcr
   watchr
   webmock
-  yui-compressor

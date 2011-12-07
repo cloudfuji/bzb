@@ -1,3 +1,15 @@
+# Automatically inserted by Bushido
+# Sets up routes for Rails 3 apps
+begin
+  Rails.application.routes.draw do
+    bushido_routes
+  end
+rescue => e
+  puts "Error loading the Bushido routes:"
+  puts "#{e.inspect}"
+end
+
+
 Bzb::Application.routes.draw do
   devise_for :users
 

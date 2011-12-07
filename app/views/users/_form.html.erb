@@ -8,8 +8,15 @@
         <li><%= msg %></li>
       <% end %>
       </ul>
-    </div>
   <% end %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+
+  <br />
+
+  <%= f.label :ido_id %>
+  <%= f.text_field :ido_id %>
 
   <div class="actions">
     <%= f.submit %>

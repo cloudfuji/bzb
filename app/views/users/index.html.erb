@@ -2,13 +2,21 @@
 
 <table>
   <tr>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Email</th>
+    <th>First</th>
+    <th>Last</th>
+    <th>ido_id</th>
+    <th>Active?</th>
   </tr>
 
 <% @users.each do |user| %>
   <tr>
+    <td><%= user.email %></td>
+    <td><%= user.first_name %></td>
+    <td><%= user.last_name %></td>
+    <td><%= user.ido_id %></td>
+    <td><%= user.active? %></td>
+
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
