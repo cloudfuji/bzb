@@ -28,4 +28,9 @@ class User < ActiveRecord::Base
   def inactive_method
     "Sorry, your account isn't active for this app"
   end
+
+  def to_s
+    return "#{self.first_name} #{self.last_name}" if self.first_name && self.last_name
+    self.email
+  end
 end
