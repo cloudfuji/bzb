@@ -6,11 +6,28 @@
 <%= @post.render_body %>
 
 <h3>Comments</h3>
+<% @comments.each do |comment| %>
 <p>
-<h4><% @post.comments.each do |comment| %></h4>
-<%= comment.display_name %> (<%= comment.display_email %>)<br />
+
+<% unless @displayed.include?(comment) %>
+<h4>
+<% comment.ancestors.length.times do %>
+!
+<% end %>
+<%= comment.id %>.) [<%= comment.parent_id %>] <%= comment.display_name %> (<%= comment.display_email %>)</h4><br />
 <%= comment.body %><br />
+
+<% comment.children.each do |comment| %>
+<% @displayed << comment %>
+<h4>
+<% comment.ancestors.length.times do %>
+!
+<% end %>
+<%= comment.id %>.) [<%= comment.parent_id %>] <%= comment.display_name %> (<%= comment.display_email %>)</h4><br />
+<%= comment.body %>
 </p>
+<% end %>
+<% end %>
 <% end %>
 <br />
 
