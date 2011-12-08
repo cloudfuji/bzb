@@ -21,7 +21,7 @@ gem 'rest-client'
 gem 'aws-s3'
 
 # Misc. gems
-gem 'bushido', :path => "../bushidogem"
+gem 'bushido', :git => "git://github.com/Bushido/bushidogem.git"
 gem 'uuid'
 gem 'awesome_print'
 
@@ -51,7 +51,7 @@ group :development, :test do
   gem 'ci_reporter'
   gem 'no_peeping_toms', :git => 'git://github.com/alindeman/no_peeping_toms.git'
   gem 'watchr'
-  gem 'tane', :path => '../tane'
+  gem 'tane', :git => 'git://github.com/Bushido/tane.git'
 end
 
 group :test do

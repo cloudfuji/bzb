@@ -1,4 +1,14 @@
 GIT
+  remote: git://github.com/Bushido/bushidogem.git
+  revision: c478ff42ea3e4a802efd502b20f7b1c3c01bc5aa
+  specs:
+    bushido (0.0.35)
+      highline (>= 1.6.1)
+      json (>= 1.4.6)
+      orm_adapter (~> 0.0.3)
+      rest-client (>= 1.6.1)
+
+GIT
   remote: git://github.com/Bushido/devise_cas_authenticatable.git
   revision: 486b4ac0d5ad9d822dc2ab2abf65ece3c2e6f684
   specs:
@@ -8,24 +18,8 @@ GIT
       rubycas-client (>= 2.2.1)
 
 GIT
-  remote: git://github.com/alindeman/no_peeping_toms.git
-  revision: 83dbd4cb993ae8e78a38a0f5cad784ca58bb0dcd
-  specs:
-    no_peeping_toms (2.1.0)
-      activerecord (>= 3.0.0)
-      activesupport (>= 3.0.0)
-
-PATH
-  remote: ../bushidogem
-  specs:
-    bushido (0.0.35)
-      highline (>= 1.6.1)
-      json (>= 1.4.6)
-      orm_adapter (~> 0.0.3)
-      rest-client (>= 1.6.1)
-
-PATH
-  remote: ../tane
+  remote: git://github.com/Bushido/tane.git
+  revision: 53a8059bec1708231c9ea6bf6e052fed4dcfa849
   specs:
     tane (0.0.1)
       awesome_print
@@ -33,6 +27,14 @@ PATH
       highline
       rake
       rest-client
+
+GIT
+  remote: git://github.com/alindeman/no_peeping_toms.git
+  revision: 83dbd4cb993ae8e78a38a0f5cad784ca58bb0dcd
+  specs:
+    no_peeping_toms (2.1.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
 
 GEM
   remote: http://rubygems.org/
@@ -92,7 +94,7 @@ GEM
     childprocess (0.2.3)
       ffi (~> 1.0.6)
     chunky_png (1.2.5)
-    ci_reporter (1.6.5)
+    ci_reporter (1.6.6)
       builder (>= 2.1.2)
     columnize (0.3.5)
     compass (0.11.5)
@@ -101,7 +103,7 @@ GEM
       sass (~> 3.1)
     compass-colors (0.9.0)
       compass (>= 0.8.7)
-    configatron (2.8.4)
+    configatron (2.9.0)
       yamler (>= 0.1.0)
     cover_me (1.2.0)
       configatron
@@ -153,7 +155,8 @@ GEM
     multi_json (1.0.4)
     nokogiri (1.5.0)
     orm_adapter (0.0.5)
-    pg (0.11.0)
+    pg (0.12.0)
+      rake-compiler (~> 0.7)
     polyglot (0.3.3)
     rack (1.2.4)
     rack-mount (0.6.14)
@@ -175,6 +178,8 @@ GEM
       rdoc (~> 3.4)
       thor (~> 0.14.4)
     rake (0.9.2.2)
+    rake-compiler (0.7.9)
+      rake
     rdoc (3.11)
       json (~> 1.4)
     redis (2.2.2)
@@ -230,7 +235,7 @@ GEM
     sass (3.1.11)
     sc-core-ext (1.2.1)
       activesupport (>= 2.3.5)
-    selenium-webdriver (2.14.0)
+    selenium-webdriver (2.15.0)
       childprocess (>= 0.2.1)
       ffi (~> 1.0.9)
       multi_json (~> 1.0.4)
