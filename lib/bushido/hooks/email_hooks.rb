@@ -13,6 +13,7 @@ class BushidoEmailHooks < Bushido::EventObserver
   end
 
   def mail_new_post
+    puts "Tags: #{tags.inspect}"
     post = Post.create(:title   => params['post_title'],
                        :body    => params['mail']['body-plain'],
                        :user_id => user.id)
@@ -29,5 +30,10 @@ class BushidoEmailHooks < Bushido::EventObserver
   def user
     @user   = User.find_by_email(params['from_email'])
     @user ||= User.find_by_email(params['mail']['sender'])
+  end
+
+  def tags
+    tags = params['tags']
+    tags.split(',').collect{ |tag| tag.strip } if tags
   end
 end
