@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<%= @comment.user %><br />
+<%= @comment.post %><br />
+<%= @comment.parent_comment_id %><br />
+<%= @comment.author_name %><br />
+<%= @comment.author_email %><br />
+<%= @comment.body %><br />
+
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to 'Back', comments_path %>

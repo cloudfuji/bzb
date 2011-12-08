@@ -1,6 +1,6 @@
 class BushidoUserHooks < Bushido::EventObserver
   def user_added
-    user.create(:email  => params['data']['email'],
+    User.create(:email  => params['data']['email'],
                 :ido_id => params['data']['ido_id'],
                 :active => true)
   end

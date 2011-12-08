@@ -1,5 +1,18 @@
 <p id="notice"><%= notice %></p>
 
+<h2><%= @post.title %></h2>
+<p> by <%= @post.user %></p>
+
+<%= @post.render_body %>
+
+<h3>Comments</h3>
+<p>
+<h4><% @post.comments.each do |comment| %></h4>
+<%= comment.display_name %> (<%= comment.display_email %>)<br />
+<%= comment.body %><br />
+</p>
+<% end %>
+<br />
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
