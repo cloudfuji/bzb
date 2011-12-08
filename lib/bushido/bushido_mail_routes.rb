@@ -14,11 +14,11 @@
   end
 
   m.route("mail.reply_comment") do
-    m.subject('{:post_title}: comment {:parent_comment_id}',
-              :post_title        => m.words_and_spaces,
-              :mock_title        => m.words_and_spaces,
-              :mock_version      => m.number,
-              :parent_comment_id => m.number)
+    m.subject('{:post_title}: comment {:parent_id}',
+                     :post_title   => m.words_and_spaces,
+                     :mock_title   => m.words_and_spaces,
+                     :mock_version => m.number,
+                     :parent_id    => m.number)
 
     
     # Must be replying to send a new comment via email

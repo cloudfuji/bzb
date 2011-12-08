@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(:version => 30) do
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
     t.integer  "post_id"
-    t.integer  "parent_comment_id"
+    t.integer  "parent_id"
     t.string   "author_name"
     t.string   "author_email"
     t.text     "body"
