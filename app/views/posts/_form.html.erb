@@ -10,8 +10,9 @@
       </ul>
     </div>
   <% end %>
-
+  <div><%= f.text_field :title, :class=>"autobox", :value=>"title" %></div>
+  <div><%= f.text_area :body, :size => "30x10" %></div>
   <div class="actions">
-    <%= f.submit %>
+   <%= f.submit :class => "hot button" %>
   </div>
 <% end %>

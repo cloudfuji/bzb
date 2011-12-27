@@ -1,0 +1,8 @@
+<div class="post">
+  <h1><%= link_to post.title, post %></h1>
+  <div class="post_body">
+    <%= link_to  post.body, post %>
+  </div>
+  <%= link_to 'Edit', edit_post_path(post) %>
+  <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
+</div>
