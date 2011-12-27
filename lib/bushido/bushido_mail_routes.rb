@@ -28,7 +28,7 @@
   m.route("mail.new_post") do
     m.subject('{:post_title}', :post_title => m.words_and_spaces)
 
-    m.body_plain("tags: {:tags}$", {:tags => m.csv}, false)
+#    m.body_plain("tags: {:tags}$", {:tags => m.csv}, false)
 
     # Must be replying to send a new comment via email
     m.add_constraint(:reply, :not_allowed)

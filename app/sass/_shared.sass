@@ -1,0 +1,74 @@
+/* Put global mixins and colors in here */
+@import "fancy-buttons"
+
+$background_color: #eeeded
+$body_color: #222548
+
+$cool_color: #222c48
+$hot_color: #e43737
+
+$header_bg_color: $cool_color
+$highlight_color: $hot_color
+
+$title_color: #FFFA99
+$link_color: #FFF
+
+/* The lazy man's grid system */
+.l
+  float: left
+  
+.r
+  float: right
+  
+.alpha
+  margin-left: 0 !important
+  padding-left: 0 !important
+  
+.omega
+  margin-right: 0 !important
+  padding-right: 0 !important
+/* .clearfix is in _reset.sass */
+
+/* FANCY BUTTONS
+button, .button
+  @include fancy-button
+  font-weight: normal !important
+  font-size: 1.0em !important
+
+button.hot, .button.hot
+  @include fancy-button($highlight_color) 
+  
+button.cool, .button.cool
+  @include fancy-button($header_bg_color)
+  @include fancy-button-padding(8px, 7px, 1px)
+  
+button.fat, .button.fat
+  @include fancy-button-padding(8px, 7px, 1px)
+  
+a.button
+  text-decoration: none !important
+  &:hover
+    text-decoration: none !important
+  
+@mixin rounded_corners($radius)
+  border-radius: $radius
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
+  
+input[type="text"], .text, .password, input[type="password"]
+  padding: 7px
+  border: 2px solid #bcc3c8
+  @include rounded_corners(5px)
+  color: $cool_color
+  background: url('/images/input-sliver.png') repeat-x
+  &:focus
+    background: url('/images/input-sliver.png') repeat-x !important
+
+/* Deprecated transparent insanity
+  @mixin transparent_fade_box
+    border: 1px solid #ab915f
+    @include rounded_corners(10px)
+    padding: 10px
+    background-image: -moz-linear-gradient(center top , rgba(183, 152, 92, 0.75) 0%, rgba(216, 195, 151, 0.2) 100%)
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, rgba(183, 152, 92, 0.75)), color-stop(100%, rgba(216, 195, 151, 0.2)))
+    background-image: linear-gradient(top, rgba(183, 152, 92, 0.75) 0%, rgba(216, 195, 151, 0.2) 100%)
