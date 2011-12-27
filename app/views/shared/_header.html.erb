@@ -4,6 +4,13 @@
     <img src="/images/logo.png" height="20" width="93" alt="bushido" class="l logo_text" />
   </a>
     <nav class="l main_site_nav">
+      <% if current_user %>
       <a href="<%= new_post_url %>">New Post</a>
+      <% end %>
     </nav>
+<!--
+    <form name="search_form" id="search_form" class="r">
+      <input type="text" name="search" id="search" class="autobox" value="Search Archives" />
+    </form>
+-->
 </div>
