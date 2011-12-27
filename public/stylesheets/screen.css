@@ -768,7 +768,345 @@ input[type="text"]:focus, .text:focus, .password:focus, input[type="password"]:f
  *   background-image: -moz-linear-gradient(center top , rgba(183, 152, 92, 0.75) 0%, rgba(216, 195, 151, 0.2) 100%)
  *   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, rgba(183, 152, 92, 0.75)), color-stop(100%, rgba(216, 195, 151, 0.2)))
  *   background-image: linear-gradient(top, rgba(183, 152, 92, 0.75) 0%, rgba(216, 195, 151, 0.2) 100%) */
-/* posts */
+/* line 1, ../../app/sass/pygments.sass */
+.hll {
+  background-color: #ffffcc;
+}
+
+/* line 4, ../../app/sass/pygments.sass */
+.c {
+  color: #408080;
+  font-style: italic;
+}
+
+/* Comment */
+/* line 10, ../../app/sass/pygments.sass */
+.err {
+  border: 1px solid red;
+}
+
+/* Error */
+/* line 15, ../../app/sass/pygments.sass */
+.k {
+  color: green;
+  font-weight: bold;
+}
+
+/* Keyword */
+/* line 21, ../../app/sass/pygments.sass */
+.o {
+  color: #666666;
+}
+
+/* Operator */
+/* line 26, ../../app/sass/pygments.sass */
+.cm {
+  color: #408080;
+  font-style: italic;
+}
+
+/* Comment.Multiline */
+/* line 32, ../../app/sass/pygments.sass */
+.cp {
+  color: #bc7a00;
+}
+
+/* Comment.Preproc */
+/* line 37, ../../app/sass/pygments.sass */
+.c1, .cs {
+  color: #408080;
+  font-style: italic;
+}
+
+/* Comment.Single */
+/* Comment.Special */
+/* line 44, ../../app/sass/pygments.sass */
+.gd {
+  color: #a00000;
+}
+
+/* Generic.Deleted */
+/* line 49, ../../app/sass/pygments.sass */
+.ge {
+  font-style: italic;
+}
+
+/* Generic.Emph */
+/* line 54, ../../app/sass/pygments.sass */
+.gr {
+  color: red;
+}
+
+/* Generic.Error */
+/* line 59, ../../app/sass/pygments.sass */
+.gh {
+  color: navy;
+  font-weight: bold;
+}
+
+/* Generic.Heading */
+/* line 65, ../../app/sass/pygments.sass */
+.gi {
+  color: #00a000;
+}
+
+/* Generic.Inserted */
+/* line 70, ../../app/sass/pygments.sass */
+.go {
+  color: gray;
+}
+
+/* Generic.Output */
+/* line 75, ../../app/sass/pygments.sass */
+.gp {
+  color: navy;
+  font-weight: bold;
+}
+
+/* Generic.Prompt */
+/* line 81, ../../app/sass/pygments.sass */
+.gs {
+  font-weight: bold;
+}
+
+/* Generic.Strong */
+/* line 86, ../../app/sass/pygments.sass */
+.gu {
+  color: purple;
+  font-weight: bold;
+}
+
+/* Generic.Subheading */
+/* line 92, ../../app/sass/pygments.sass */
+.gt {
+  color: #0040d0;
+}
+
+/* Generic.Traceback */
+/* line 97, ../../app/sass/pygments.sass */
+.kc, .kd, .kn {
+  color: green;
+  font-weight: bold;
+}
+
+/* Keyword.Constant */
+/* Keyword.Declaration */
+/* Keyword.Namespace */
+/* line 105, ../../app/sass/pygments.sass */
+.kp {
+  color: green;
+}
+
+/* Keyword.Pseudo */
+/* line 110, ../../app/sass/pygments.sass */
+.kr {
+  color: green;
+  font-weight: bold;
+}
+
+/* Keyword.Reserved */
+/* line 116, ../../app/sass/pygments.sass */
+.kt {
+  color: #b00040;
+}
+
+/* Keyword.Type */
+/* line 121, ../../app/sass/pygments.sass */
+.m {
+  color: #666666;
+}
+
+/* Literal.Number */
+/* line 126, ../../app/sass/pygments.sass */
+.s {
+  color: #ba2121;
+}
+
+/* Literal.String */
+/* line 131, ../../app/sass/pygments.sass */
+.na {
+  color: #7d9029;
+}
+
+/* Name.Attribute */
+/* line 136, ../../app/sass/pygments.sass */
+.nb {
+  color: green;
+}
+
+/* Name.Builtin */
+/* line 141, ../../app/sass/pygments.sass */
+.nc {
+  color: blue;
+  font-weight: bold;
+}
+
+/* Name.Class */
+/* line 147, ../../app/sass/pygments.sass */
+.no {
+  color: #880000;
+}
+
+/* Name.Constant */
+/* line 152, ../../app/sass/pygments.sass */
+.nd {
+  color: #aa22ff;
+}
+
+/* Name.Decorator */
+/* line 157, ../../app/sass/pygments.sass */
+.ni {
+  color: #999999;
+  font-weight: bold;
+}
+
+/* Name.Entity */
+/* line 163, ../../app/sass/pygments.sass */
+.ne {
+  color: #d2413a;
+  font-weight: bold;
+}
+
+/* Name.Exception */
+/* line 169, ../../app/sass/pygments.sass */
+.nf {
+  color: blue;
+}
+
+/* Name.Function */
+/* line 174, ../../app/sass/pygments.sass */
+.nl {
+  color: #a0a000;
+}
+
+/* Name.Label */
+/* line 179, ../../app/sass/pygments.sass */
+.nn {
+  color: blue;
+  font-weight: bold;
+}
+
+/* Name.Namespace */
+/* line 185, ../../app/sass/pygments.sass */
+.nt {
+  color: green;
+  font-weight: bold;
+}
+
+/* Name.Tag */
+/* line 191, ../../app/sass/pygments.sass */
+.nv {
+  color: #19177c;
+}
+
+/* Name.Variable */
+/* line 196, ../../app/sass/pygments.sass */
+.ow {
+  color: #aa22ff;
+  font-weight: bold;
+}
+
+/* Operator.Word */
+/* line 202, ../../app/sass/pygments.sass */
+.w {
+  color: #bbbbbb;
+}
+
+/* Text.Whitespace */
+/* line 207, ../../app/sass/pygments.sass */
+.mf, .mh, .mi, .mo {
+  color: #666666;
+}
+
+/* Literal.Number.Float */
+/* Literal.Number.Hex */
+/* Literal.Number.Integer */
+/* Literal.Number.Oct */
+/* line 215, ../../app/sass/pygments.sass */
+.sb, .sc {
+  color: #ba2121;
+}
+
+/* Literal.String.Backtick */
+/* Literal.String.Char */
+/* line 221, ../../app/sass/pygments.sass */
+.sd {
+  color: #ba2121;
+  font-style: italic;
+}
+
+/* Literal.String.Doc */
+/* line 227, ../../app/sass/pygments.sass */
+.s2 {
+  color: #ba2121;
+}
+
+/* Literal.String.Double */
+/* line 232, ../../app/sass/pygments.sass */
+.se {
+  color: #bb6622;
+  font-weight: bold;
+}
+
+/* Literal.String.Escape */
+/* line 238, ../../app/sass/pygments.sass */
+.sh {
+  color: #ba2121;
+}
+
+/* Literal.String.Heredoc */
+/* line 243, ../../app/sass/pygments.sass */
+.si {
+  color: #bb6688;
+  font-weight: bold;
+}
+
+/* Literal.String.Interpol */
+/* line 249, ../../app/sass/pygments.sass */
+.sx {
+  color: green;
+}
+
+/* Literal.String.Other */
+/* line 254, ../../app/sass/pygments.sass */
+.sr {
+  color: #bb6688;
+}
+
+/* Literal.String.Regex */
+/* line 259, ../../app/sass/pygments.sass */
+.s1 {
+  color: #ba2121;
+}
+
+/* Literal.String.Single */
+/* line 264, ../../app/sass/pygments.sass */
+.ss {
+  color: #19177c;
+}
+
+/* Literal.String.Symbol */
+/* line 269, ../../app/sass/pygments.sass */
+.bp {
+  color: green;
+}
+
+/* Name.Builtin.Pseudo */
+/* line 274, ../../app/sass/pygments.sass */
+.vc, .vg, .vi {
+  color: #19177c;
+}
+
+/* Name.Variable.Class */
+/* Name.Variable.Global */
+/* Name.Variable.Instance */
+/* line 281, ../../app/sass/pygments.sass */
+.il {
+  color: #666666;
+}
+
+/* Literal.Number.Integer.Long */
+/* Posts */
 /* line 2, ../../app/sass/posts/index.sass */
 .post h1 {
   font-size: 36px;
@@ -815,24 +1153,34 @@ input[type="text"]:focus, .text:focus, .password:focus, input[type="password"]:f
   display: none;
 }
 
-/* line 7, ../../app/sass/screen.sass */
+/* Comments */
+/* line 1, ../../app/sass/comments/index.sass */
+section.comments {
+  padding-top: 15px;
+}
+/* line 3, ../../app/sass/comments/index.sass */
+section.comments #comment_body {
+  margin: 5px 0 !important;
+}
+
+/* line 13, ../../app/sass/screen.sass */
 html {
   height: 100%;
 }
 
-/* line 10, ../../app/sass/screen.sass */
+/* line 16, ../../app/sass/screen.sass */
 body {
   height: 100%;
   background: #eeeded url("/images/pattern-bg.png") repeat;
   color: #222548;
 }
-/* line 14, ../../app/sass/screen.sass */
+/* line 20, ../../app/sass/screen.sass */
 body > div#root {
   height: auto;
   min-height: 100%;
 }
 
-/* line 18, ../../app/sass/screen.sass */
+/* line 24, ../../app/sass/screen.sass */
 div#root {
   height: 100%;
   width: 990px;
@@ -843,13 +1191,13 @@ div#root {
   box-shadow: 0px 0px 10px #888888;
 }
 
-/* line 27, ../../app/sass/screen.sass */
+/* line 33, ../../app/sass/screen.sass */
 .main_header {
   display: block;
   height: 100px;
 }
 
-/* line 31, ../../app/sass/screen.sass */
+/* line 37, ../../app/sass/screen.sass */
 .flash {
   color: white;
   background-color: #e43737;
@@ -857,12 +1205,12 @@ div#root {
   padding: 5px 0;
   font-size: 18px;
 }
-/* line 37, ../../app/sass/screen.sass */
+/* line 43, ../../app/sass/screen.sass */
 .flash a {
   color: black;
 }
 
-/* line 41, ../../app/sass/screen.sass */
+/* line 47, ../../app/sass/screen.sass */
 #footer {
   display: block;
   background: #222c48 url("/images/footer-bg.png");
@@ -873,7 +1221,7 @@ div#root {
   color: white;
   padding: 15px;
 }
-/* line 50, ../../app/sass/screen.sass */
+/* line 56, ../../app/sass/screen.sass */
 #footer ul {
   float: left;
   display: block;
@@ -881,91 +1229,91 @@ div#root {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 56, ../../app/sass/screen.sass */
+/* line 62, ../../app/sass/screen.sass */
 #footer a {
   color: white;
 }
 
-/* line 60, ../../app/sass/screen.sass */
+/* line 66, ../../app/sass/screen.sass */
 #main {
   display: block;
   padding-bottom: 100px;
   background: white;
 }
 
-/* line 66, ../../app/sass/screen.sass */
+/* line 72, ../../app/sass/screen.sass */
 form.top_label p {
   padding: 6px 0;
 }
-/* line 68, ../../app/sass/screen.sass */
+/* line 74, ../../app/sass/screen.sass */
 form.top_label p input[type='text'] {
   margin-top: 3px;
 }
 
-/* line 72, ../../app/sass/screen.sass */
+/* line 78, ../../app/sass/screen.sass */
 #content {
   padding: 15px;
 }
-/* line 74, ../../app/sass/screen.sass */
+/* line 80, ../../app/sass/screen.sass */
 #content a {
   text-decoration: none;
   color: #e43737;
 }
-/* line 77, ../../app/sass/screen.sass */
+/* line 83, ../../app/sass/screen.sass */
 #content a:hover {
   text-decoration: underline;
 }
-/* line 79, ../../app/sass/screen.sass */
+/* line 85, ../../app/sass/screen.sass */
 #content a.button {
   color: white;
 }
 
-/* line 82, ../../app/sass/screen.sass */
+/* line 88, ../../app/sass/screen.sass */
 .right_col, .left_col, .col_r, col_l {
   padding: 15px;
 }
 
-/* line 85, ../../app/sass/screen.sass */
+/* line 91, ../../app/sass/screen.sass */
 .right_col, .col_r {
   width: 320px;
 }
 
-/* line 88, ../../app/sass/screen.sass */
+/* line 94, ../../app/sass/screen.sass */
 .left_col, .col_l {
   width: 607px;
 }
 
-/* line 91, ../../app/sass/screen.sass */
+/* line 97, ../../app/sass/screen.sass */
 .main_header, .log_header {
   height: 50px;
   background: #222c48;
   border-bottom: 5px solid #e43737;
 }
-/* line 95, ../../app/sass/screen.sass */
+/* line 101, ../../app/sass/screen.sass */
 .main_header a, .log_header a {
   text-decoration: none;
   color: #e43737;
 }
-/* line 98, ../../app/sass/screen.sass */
+/* line 104, ../../app/sass/screen.sass */
 .main_header .logo, .log_header .logo {
   color: white;
   padding: 4px 0 0 15px;
 }
-/* line 101, ../../app/sass/screen.sass */
+/* line 107, ../../app/sass/screen.sass */
 .main_header .logo .logo_text, .log_header .logo .logo_text {
   padding: 10px 0 0 10px;
 }
-/* line 103, ../../app/sass/screen.sass */
+/* line 109, ../../app/sass/screen.sass */
 .main_header span, .log_header span {
   color: white;
 }
 
-/* line 106, ../../app/sass/screen.sass */
+/* line 112, ../../app/sass/screen.sass */
 .main_site_nav {
   display: block;
   height: 35px;
 }
-/* line 109, ../../app/sass/screen.sass */
+/* line 115, ../../app/sass/screen.sass */
 .main_site_nav a {
   display: block;
   height: 50px;
@@ -976,11 +1324,11 @@ form.top_label p input[type='text'] {
   margin-top: 17px;
   margin-left: 10px;
 }
-/* line 118, ../../app/sass/screen.sass */
+/* line 124, ../../app/sass/screen.sass */
 .main_site_nav span {
   color: #e43737 !important;
 }
-/* line 121, ../../app/sass/screen.sass */
+/* line 127, ../../app/sass/screen.sass */
 .main_site_nav a.hot .flag {
   display: block;
   border-color: transparent transparent #e43737 transparent;
@@ -991,19 +1339,19 @@ form.top_label p input[type='text'] {
   height: 0;
 }
 
-/* line 130, ../../app/sass/screen.sass */
+/* line 136, ../../app/sass/screen.sass */
 .divider {
   height: 36px;
   width: 960px;
   padding: 4px 15px;
   line-height: 40px;
 }
-/* line 135, ../../app/sass/screen.sass */
+/* line 141, ../../app/sass/screen.sass */
 .divider label {
   color: #7b8287;
   text-shadow: 0px 0px 3px white;
 }
-/* line 138, ../../app/sass/screen.sass */
+/* line 144, ../../app/sass/screen.sass */
 .divider input[type="text"] {
   margin-left: 15px;
   height: 22px;
@@ -1015,7 +1363,7 @@ form.top_label p input[type='text'] {
   -webkit-border-radius: 5px;
 }
 
-/* line 146, ../../app/sass/screen.sass */
+/* line 152, ../../app/sass/screen.sass */
 .divider.dark {
   background: #bbc2c7;
   -moz-box-shadow: inset 0px 2px 5px #888888, inset 0px -2px 5px #888888;
@@ -1023,7 +1371,7 @@ form.top_label p input[type='text'] {
   box-shadow: inset 0px 2px 5px #888888, inset 0px -2px 5px #888888;
 }
 
-/* line 152, ../../app/sass/screen.sass */
+/* line 158, ../../app/sass/screen.sass */
 .bushi_box {
   background: #f5f6f2;
 @rounded_corners(10px);
@@ -1031,26 +1379,26 @@ form.top_label p input[type='text'] {
   font-weight: bold;
   color: #7b8287;
 }
-/* line 158, ../../app/sass/screen.sass */
+/* line 164, ../../app/sass/screen.sass */
 .bushi_box a {
   color: #e43737;
   text-decoration: none;
 }
-/* line 161, ../../app/sass/screen.sass */
+/* line 167, ../../app/sass/screen.sass */
 .bushi_box a:hover {
   text-decoration: underline;
 }
 
-/* line 164, ../../app/sass/screen.sass */
+/* line 170, ../../app/sass/screen.sass */
 body.apps_fresh .bushi_box {
   font-size: 1.6em;
 }
 
-/* line 167, ../../app/sass/screen.sass */
+/* line 173, ../../app/sass/screen.sass */
 #auth_links {
   padding: 16px 15px 0;
 }
-/* line 169, ../../app/sass/screen.sass */
+/* line 175, ../../app/sass/screen.sass */
 #auth_links .flag {
   display: block;
   border-color: white transparent transparent transparent;
@@ -1062,19 +1410,19 @@ body.apps_fresh .bushi_box {
   height: 0;
 }
 
-/* line 179, ../../app/sass/screen.sass */
+/* line 185, ../../app/sass/screen.sass */
 #auth_links {
   display: block;
   background: #222c48;
 }
-/* line 182, ../../app/sass/screen.sass */
+/* line 188, ../../app/sass/screen.sass */
 #auth_links nav {
   display: none;
   padding: 10px 0;
   background: #222c48;
 }
 
-/* line 187, ../../app/sass/screen.sass */
+/* line 193, ../../app/sass/screen.sass */
 #auth_links.open {
   -moz-box-shadow: inset 0px 5px 5px #888888, 0px 5px 5px #888888;
   -webkit-box-shadow: inset 0px 5px 5px #888888, 0px 5px 5px #888888;
@@ -1084,7 +1432,7 @@ body.apps_fresh .bushi_box {
   -webkit-border-radius: 5px;
 }
 
-/* line 193, ../../app/sass/screen.sass */
+/* line 199, ../../app/sass/screen.sass */
 .icon_frame {
   display: block;
   background: url("/images/dashboardframe.png") no-repeat top center;
@@ -1093,16 +1441,16 @@ body.apps_fresh .bushi_box {
   padding: 4px;
 }
 
-/* line 199, ../../app/sass/screen.sass */
+/* line 205, ../../app/sass/screen.sass */
 .content_header {
   padding-bottom: 10px;
   font-size: 20px;
 }
-/* line 202, ../../app/sass/screen.sass */
+/* line 208, ../../app/sass/screen.sass */
 .content_header a {
   color: #e43737;
 }
-/* line 204, ../../app/sass/screen.sass */
+/* line 210, ../../app/sass/screen.sass */
 .content_header a:hover {
   text-decoration: none;
 }
