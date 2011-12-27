@@ -1,0 +1,38 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+html {
+	height: 100%;
+}
+ 
+body {
+	height: 100%;
+}
+ 
+body > div#root {
+	height: auto;
+	min-height: 100%;
+}
+ 
+div#root {
+	height: 100%;
+}
+ 
+.main_header {
+	display: block;
+	height: 100px;
+}
+ 
+#footer {
+	display: block;
+	height: 100px;           /* set the footer height */
+	margin-top: -100px;      /* match footer height */
+	background: #000;
+}
+ 
+#main {
+	display: block;
+	padding-bottom: 100px;   /* match footer height */
+}

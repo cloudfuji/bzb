@@ -1,0 +1,51 @@
+<meta charset="utf-8">
+
+<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+     Remove this if you use the .htaccess -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title><%= @title ? "#{@title} | " : nil %>Bushido</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+<link rel="shortcut icon" href="/faviconred-w.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" >
+
+
+<link rel="stylesheet" href="/javascripts/vendor/jquery.terminal/css/jquery.terminal.css">
+
+<%= include_stylesheets :common, :media => 'all' %>
+<%= include_stylesheets :print, :media => 'print' %>
+
+<!--[if IE]>
+<%= stylesheet_link_tag "ie.css", :media => 'screen, projection' %>
+<![endif]-->
+<!--[if !IE 7]>
+<style type="text/css">
+	#wrap {display:table;height:100%}
+</style>
+<![endif]-->
+<%= csrf_meta_tag %>
+
+<!-- Uncomment if you are specifically targeting less enabled mobile browsers
+<link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
+
+<!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+<script src="/javascripts/vendor/modernizr-1.6.min.js"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '<%= ENV['RAILS_ENV'] == "production" ? "UA-22212382-1" : "devbox"  %>']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
