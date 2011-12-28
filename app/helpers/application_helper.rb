@@ -2,7 +2,6 @@ require 'net/http'
 require 'uri'
 
 module ApplicationHelper
-
   def syntax_highlighter(html)
     doc = Nokogiri::HTML(html)
     doc.search("//pre[@lang]").each do |pre|
@@ -22,6 +21,6 @@ module ApplicationHelper
       :gh_blockcode => true,
     }
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, options)
-    syntax_highlighter(markdown.render(text)).html_safe
+    syntax_highlighter(markdown.render(text))
   end
 end

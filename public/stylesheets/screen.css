@@ -746,7 +746,7 @@ a.button:hover {
 }
 
 /* line 58, ../../app/sass/_shared.sass */
-input[type="text"], .text, .password, input[type="password"] {
+input[type="text"], .text, .password, input[type="password"], textarea {
   padding: 7px;
   border: 2px solid #bcc3c8;
   border-radius: 5px;
@@ -756,8 +756,18 @@ input[type="text"], .text, .password, input[type="password"] {
   background: url("/images/input-sliver.png") repeat-x;
 }
 /* line 64, ../../app/sass/_shared.sass */
-input[type="text"]:focus, .text:focus, .password:focus, input[type="password"]:focus {
+input[type="text"]:focus, .text:focus, .password:focus, input[type="password"]:focus, textarea:focus {
   background: url("/images/input-sliver.png") repeat-x !important;
+}
+
+/* line 67, ../../app/sass/_shared.sass */
+.autobox.default {
+  color: #bcc3c8;
+}
+
+/* line 70, ../../app/sass/_shared.sass */
+.autobox.filled {
+  color: #222c48;
 }
 
 /* Deprecated transparent insanity
@@ -1131,16 +1141,12 @@ input[type="text"]:focus, .text:focus, .password:focus, input[type="password"]:f
 .post_body {
   font-size: 16px;
 }
-/* line 16, ../../app/sass/posts/index.sass */
-.post_body a {
-  color: #222c48 !important;
-}
 
-/* line 20, ../../app/sass/posts/index.sass */
+/* line 18, ../../app/sass/posts/index.sass */
 .posts_index .post {
   padding: 10px 0;
 }
-/* line 22, ../../app/sass/posts/index.sass */
+/* line 20, ../../app/sass/posts/index.sass */
 .posts_index .post_body {
   height: 90px;
   overflow: hidden;
@@ -1148,9 +1154,21 @@ input[type="text"]:focus, .text:focus, .password:focus, input[type="password"]:f
   background: #eeeded;
 }
 
-/* line 29, ../../app/sass/posts/index.sass */
+/* line 27, ../../app/sass/posts/index.sass */
 .posts_show .read_more {
   display: none;
+}
+/* line 29, ../../app/sass/posts/index.sass */
+.posts_show .post_body {
+  padding: 5px 0;
+}
+/* line 31, ../../app/sass/posts/index.sass */
+.posts_show .post_body ul {
+  list-style-type: square;
+}
+/* line 33, ../../app/sass/posts/index.sass */
+.posts_show .post_body hr {
+  border-color: #e43737;
 }
 
 /* Comments */

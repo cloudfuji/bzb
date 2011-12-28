@@ -1,5 +1,5 @@
 <div class="post">
   <h1><%= link_to "#{post.title.capitalize}", post, :alt => post.title.capitalize  %><span><%= post.created_at.strftime("%m/%d/%Y") %></span></h1>
-  <div class="post_body"><%= markdown(post.body) %></div>
+  <div class="post_body"><%= raw markdown(post.body) %></div>
   <%= link_to "Read More", post, :class => 'read_more' %>
 </div>

@@ -1,8 +1,10 @@
 class PostsController < ApplicationController
+  before_filter :authenticate_user!, :only => [:new, :edit, :update, :destroy]
+
   # GET /posts
   # GET /posts.xml
   def index
-    @posts = Post.all
+    @posts = Post.find(:all, :order => "created_at DESC")
     
     respond_to do |format|
       format.html # index.html.erb
