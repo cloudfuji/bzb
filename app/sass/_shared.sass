@@ -55,7 +55,7 @@ a.button
   -moz-border-radius: $radius
   -webkit-border-radius: $radius
   
-input[type="text"], .text, .password, input[type="password"]
+input[type="text"], .text, .password, input[type="password"], textarea
   padding: 7px
   border: 2px solid #bcc3c8
   @include rounded_corners(5px)
@@ -63,6 +63,12 @@ input[type="text"], .text, .password, input[type="password"]
   background: url('/images/input-sliver.png') repeat-x
   &:focus
     background: url('/images/input-sliver.png') repeat-x !important
+
+.autobox.default
+  color: #bcc3c8
+
+.autobox.filled
+  color: $cool_color
 
 /* Deprecated transparent insanity
   @mixin transparent_fade_box

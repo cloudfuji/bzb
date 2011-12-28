@@ -25,6 +25,11 @@ gem 'bushido', :git => "git://github.com/Bushido/bushidogem.git"
 gem 'uuid'
 gem 'awesome_print'
 
+# Markdown/syntax
+gem 'redcarpet'
+gem 'albino'
+gem 'nokogiri'
+
 # Assets
 gem 'closure-compiler'
 gem 'yui-compressor'

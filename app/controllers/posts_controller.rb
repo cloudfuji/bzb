@@ -1,9 +1,11 @@
 class PostsController < ApplicationController
+  before_filter :authenticate_user!, :only => [:new, :edit, :update, :destroy]
+
   # GET /posts
   # GET /posts.xml
   def index
-    @posts = Post.all
-
+    @posts = Post.find(:all, :order => "created_at DESC")
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }
@@ -14,6 +16,7 @@ class PostsController < ApplicationController
   # GET /posts/1.xml
   def show
     @post = Post.find(params[:id])
+    @comment = Comment.new
     @comments = @post.comments
 
     # Used for threading the comments, probably better to do in

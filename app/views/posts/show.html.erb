@@ -1,1 +1,56 @@
 <%= render :partial => 'post', :object => @post %>
+
+<section class="comments">
+<h3>Comments</h3>
+<%= form_for(@comment) do |f| %>
+  <% if @comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% @comment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <% unless current_user %>
+  <%= f.text_field :author_email, :class => "autobox", :value => "Your email"  %>
+  <% else %>
+  <%= f.hidden_field :author_email, :value => current_user.email  %>
+  <% end %>
+  <%= f.text_area :body, :size=>"100x8", :class => "autobox", :value=> "Enter Your Comment..." %>
+  <%= f.hidden_field :user_id, :value => (current_user) ? current_user.id : 0 %>
+  <%= f.hidden_field :post_id, :value => @post.id %>
+
+  <div class="actions">
+    <%= f.submit :class => "button hot" %>
+  </div>
+
+<% end %>
+
+<% @comments.each do |comment| %>
+<p>
+
+  <% unless @displayed.include?(comment) %>
+  <h4>
+  <% comment.ancestors.length.times do %>
+  !
+  <% end %>
+  <%= comment.id %>.) [<%= comment.parent_id %>] <%= comment.display_name %> (<%= comment.display_email %>)</h4><br />
+  <%= comment.body %><br />
+
+  <% comment.children.each do |comment| %>
+  <% @displayed << comment %>
+		   <h4>
+		     <% comment.ancestors.length.times do %>
+		     !
+		     <% end %>
+		     <%= comment.id %>.) [<%= comment.parent_id %>] <%= comment.display_name %> (<%= comment.display_email %>)</h4><br />
+		   <%= comment.body %>
+</p>
+<% end %>
+<% end %>
+<% end %>
+</section>
