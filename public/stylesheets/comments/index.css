@@ -1,0 +1,8 @@
+/* line 1, ../../../app/sass/comments/index.sass */
+section.comments {
+  padding-top: 15px;
+}
+/* line 3, ../../../app/sass/comments/index.sass */
+section.comments #comment_body {
+  margin: 5px 0 !important;
+}

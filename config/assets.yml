@@ -15,8 +15,19 @@ compressor_options:
 
 javascripts:
   common:
-    #
+    - public/javascripts/vendor/jquery/jquery.1.5.2.js
+    - public/javascripts/vendor/jquery-ui-1.8.12.custom/development-bundle/ui/jquery-ui-1.8.12.custom.js
+    - public/javascripts/lib/Object.js
+    - public/javascripts/lib/String.js
+    - public/javascripts/vendor/jquery/jquery.autobox.js
+    - public/javascripts/vendor/jquery/jquery.disable.js
+    - public/javascripts/widgets/toggle_link.js
+    - public/javascripts/vendor/formValidator.2.2/js/languages/jquery.validationEngine-en.js
+    - public/javascripts/vendor/formValidator.2.2/js/jquery.validationEngine.js
+    - public/javascripts/application.js
   posts:
+    #
+  comments:
     #
     
 stylesheets:
