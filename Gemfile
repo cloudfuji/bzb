@@ -58,7 +58,7 @@ group :development, :test do
   gem 'ci_reporter'
   gem 'no_peeping_toms', :git => 'git://github.com/alindeman/no_peeping_toms.git'
   gem 'watchr'
-  gem 'tane', :path => '/remote/tane'
+  gem 'tane'
 end
 
 group :test do
