@@ -1,18 +1,18 @@
 <%= render :partial => 'post', :object => @post %>
 
 <section class="comments">
-<h3>Comments</h3>
-<%= form_for(@comment) do |f| %>
+  <h3>Comments</h3>
+  <%= form_for(@comment) do |f| %>
   <% if @comment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+  <div id="error_explanation">
+    <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
 
-      <ul>
+    <ul>
       <% @comment.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+      <li><%= msg %></li>
       <% end %>
-      </ul>
-    </div>
+    </ul>
+  </div>
   <% end %>
   
   <% unless current_user %>
@@ -28,29 +28,10 @@
     <%= f.submit :class => "button hot" %>
   </div>
 
-<% end %>
-
-<% @comments.each do |comment| %>
-<p>
-
-  <% unless @displayed.include?(comment) %>
-  <h4>
-  <% comment.ancestors.length.times do %>
-  !
   <% end %>
-  <%= comment.id %>.) [<%= comment.parent_id %>] <%= comment.display_name %> (<%= comment.display_email %>)</h4><br />
-  <%= comment.body %><br />
 
-  <% comment.children.each do |comment| %>
-  <% @displayed << comment %>
-		   <h4>
-		     <% comment.ancestors.length.times do %>
-		     !
-		     <% end %>
-		     <%= comment.id %>.) [<%= comment.parent_id %>] <%= comment.display_name %> (<%= comment.display_email %>)</h4><br />
-		   <%= comment.body %>
-</p>
-<% end %>
-<% end %>
-<% end %>
+  <div class="comment_list">
+  <%= render :partial => "comments/comment", :collection => @comments %>
+  </div>
+
 </section>

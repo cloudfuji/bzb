@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
   end
 
   def to_s
-    return "#{self.first_name} #{self.last_name}" if self.first_name && self.last_name
+    return "#{self.first_name} #{self.last_name}" unless self.first_name.empty? && self.last_name.empty?
     self.email
   end
 end
