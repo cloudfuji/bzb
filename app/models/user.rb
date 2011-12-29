@@ -1,18 +1,21 @@
 class User < ActiveRecord::Base
-
-  devise :trackable, :validatable, :bushido_authenticatable,
-         :token_authenticatable
+  def bushido_extra_attributes(extra_attributes)
+    self.first_name = extra_attributes["first_name"].to_s
+    self.last_name  = extra_attributes["last_name"].to_s
+    self.email      = extra_attributes["email"]
+    self.locale     = extra_attributes["locale"]
+    self.timezone     = extra_attributes["timezone"]
+  end
+  # Include default devise modules. Others available are:
+  # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :bushido_authenticatable
+         
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :active, :ido_id
-
-  attr_accessor :password
+  attr_accessible :email, :ido_id, :first_name, :last_name
 
   validates_presence_of :email
   validates_presence_of :ido_id
-
-  before_validation Proc.new { |user| user.password ||= "asdfjalsdjfkalsdf" }
-  before_validation Proc.new { |user| user.active   ||= true }
 
   has_many :posts
 
