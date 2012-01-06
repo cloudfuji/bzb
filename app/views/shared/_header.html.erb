@@ -3,11 +3,31 @@
     <img src="/images/header-logo.png" class="l" />
     <img src="/images/logo.png" height="20" width="93" alt="bushido" class="l logo_text" />
   </a>
-    <nav class="l main_site_nav">
+  <nav class="l main_site_nav">
+    <% if current_user %>
+
+    <% end %>
+
+  </nav>
+    <div class="r" id="auth_links" class="user_controls">
       <% if current_user %>
-      <a href="<%= new_post_url %>">New Post</a>
+        <a href="#" class="user">
+          <span class="user_data l"><%= current_user.email %></span>
+          <cite class="flag r"></cite>
+        </a>
+        <nav class="user_nav">
+	  <p><a href="/account">Account</a></p>
+  	  <p> <%= link_to "Log Out", destroy_user_session_path %></p>
+        </nav>
+      <% else %>
+        <%= link_to "Log in", new_post_url %>
       <% end %>
+    </div>
+    <% if current_user %>
+    <nav class="l main_site_nav">
+        <a href="<%= new_post_url %>">New Post</a>
     </nav>
+    <% end %>
 <!--
     <form name="search_form" id="search_form" class="r">
       <input type="text" name="search" id="search" class="autobox" value="Search Archives" />

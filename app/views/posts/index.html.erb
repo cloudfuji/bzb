@@ -1,3 +1,7 @@
+<% if @posts.count == 0 %>
+ <h1 style="font-size: 30px">There are currently no posts on this blog. Please <a href="<%= new_post_url  %>">make some.</a></h1>
+<% end %>
+
 <% @posts.each do |post| %>
 <%= render :partial => 'post', :object => post %>
 <% end %>

@@ -1117,36 +1117,49 @@ input[type="text"]:focus, .text:focus, .password:focus, input[type="password"]:f
 
 /* Literal.Number.Integer.Long */
 /* Posts */
-/* line 2, ../../app/sass/posts/_index.sass */
-.post h1 {
-  font-size: 36px;
+/* line 1, ../../app/sass/posts/_index.sass */
+h1 {
+  font-family: Helvetica;
+  font-size: 34px;
   padding-bottom: 5px;
 }
-/* line 5, ../../app/sass/posts/_index.sass */
+
+/* line 8, ../../app/sass/posts/_index.sass */
 .post h1 a {
   color: #222c48 !important;
 }
-/* line 7, ../../app/sass/posts/_index.sass */
+/* line 10, ../../app/sass/posts/_index.sass */
 .post h1 span {
   padding-left: 5px;
   font-size: 16px;
   color: #222c48;
 }
-/* line 11, ../../app/sass/posts/_index.sass */
+/* line 14, ../../app/sass/posts/_index.sass */
 .post h2 {
   font-size: 30px;
 }
 
-/* line 14, ../../app/sass/posts/_index.sass */
+/* line 17, ../../app/sass/posts/_index.sass */
 .post_body {
   font-size: 16px;
 }
 
-/* line 18, ../../app/sass/posts/_index.sass */
+/* line 20, ../../app/sass/posts/_index.sass */
+textarea#post_body {
+  margin: 10px 0;
+  width: 98%;
+}
+
+/* line 24, ../../app/sass/posts/_index.sass */
+#post_submit {
+  margin-bottom: 10px;
+}
+
+/* line 28, ../../app/sass/posts/_index.sass */
 .posts_index .post {
   padding: 10px 0;
 }
-/* line 20, ../../app/sass/posts/_index.sass */
+/* line 30, ../../app/sass/posts/_index.sass */
 .posts_index .post_body {
   height: 90px;
   overflow: hidden;
@@ -1154,19 +1167,19 @@ input[type="text"]:focus, .text:focus, .password:focus, input[type="password"]:f
   background: #eeeded;
 }
 
-/* line 27, ../../app/sass/posts/_index.sass */
+/* line 37, ../../app/sass/posts/_index.sass */
 .posts_show .read_more {
   display: none;
 }
-/* line 29, ../../app/sass/posts/_index.sass */
+/* line 39, ../../app/sass/posts/_index.sass */
 .posts_show .post_body {
   padding: 5px 0;
 }
-/* line 31, ../../app/sass/posts/_index.sass */
+/* line 41, ../../app/sass/posts/_index.sass */
 .posts_show .post_body ul {
   list-style-type: square;
 }
-/* line 33, ../../app/sass/posts/_index.sass */
+/* line 43, ../../app/sass/posts/_index.sass */
 .posts_show .post_body hr {
   border-color: #e43737;
 }
