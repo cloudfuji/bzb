@@ -27,8 +27,8 @@ gem 'awesome_print'
 
 # Markdown/syntax
 gem 'redcarpet'
-gem 'albino'
 gem 'nokogiri'
+gem 'pygmentize'
 
 # Assets
 gem 'closure-compiler'
