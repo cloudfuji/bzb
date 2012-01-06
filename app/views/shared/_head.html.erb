@@ -15,7 +15,8 @@
 <link rel="shortcut icon" href="/faviconred-w.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" >
 
-<link rel="stylesheet" href="/javascripts/vendor/jquery.terminal/css/jquery.terminal.css">
+<link rel="stylesheet" href="/syntaxhighlighter_3.0.83/styles/shCore.css">
+<link rel="stylesheet" href="/syntaxhighlighter_3.0.83/styles/shThemeDefault.css">
 
 <%= include_stylesheets :common, :media => 'all' %>
 <%= include_stylesheets :print, :media => 'print' %>
@@ -33,8 +34,11 @@
 <!-- Uncomment if you are specifically targeting less enabled mobile browsers
 <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
 
-<!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-<script src="/javascripts/vendor/modernizr-1.6.min.js"></script>
+<script src="/javascripts/vendor/modernizr-1.6.min.js" type="text/javascript"></script>
+
+<script src="/syntaxhighlighter_3.0.83/scripts/shCore.js" type="text/javascript"></script>
+<script src="/syntaxhighlighter_3.0.83/scripts/shAutoLoader.js" type="text/javascript"></script>
+<script src="/syntaxhighlighter_3.0.83/scripts/init.js" type="text/javascript"></script>
 
 <script type="text/javascript">
   var _gaq = _gaq || [];
