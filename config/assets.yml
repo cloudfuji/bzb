@@ -21,7 +21,6 @@ javascripts:
     - public/javascripts/lib/String.js
     - public/javascripts/vendor/jquery/jquery.autobox.js
     - public/javascripts/vendor/jquery/jquery.disable.js
-    - public/javascripts/widgets/toggle_link.js
     - public/javascripts/vendor/formValidator.2.2/js/languages/jquery.validationEngine-en.js
     - public/javascripts/vendor/formValidator.2.2/js/jquery.validationEngine.js
     - public/javascripts/application.js
