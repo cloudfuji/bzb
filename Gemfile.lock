@@ -60,8 +60,6 @@ GEM
       activesupport (= 3.0.11)
     activesupport (3.0.11)
     addressable (2.2.6)
-    albino (1.3.3)
-      posix-spawn (>= 0.3.6)
     archive-tar-minitar (0.5.2)
     arel (2.0.10)
     autotest (4.4.6)
@@ -155,7 +153,7 @@ GEM
     pg (0.12.0)
       rake-compiler (~> 0.7)
     polyglot (0.3.3)
-    posix-spawn (0.3.6)
+    pygmentize (0.0.3)
     rack (1.2.5)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
@@ -284,7 +282,6 @@ PLATFORMS
 
 DEPENDENCIES
   ZenTest (>= 4.4.2)
-  albino
   autotest
   autotest-rails
   awesome_print
@@ -310,6 +307,7 @@ DEPENDENCIES
   no_peeping_toms!
   nokogiri
   pg (>= 0.10.0)
+  pygmentize
   rails (= 3.0.11)
   redcarpet
   resque

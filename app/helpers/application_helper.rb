@@ -1,26 +1,54 @@
 require 'net/http'
 require 'uri'
+require 'pygmentize'
 
 module ApplicationHelper
-  def syntax_highlighter(html)
-    doc = Nokogiri::HTML(html)
-    doc.search("//pre[@lang]").each do |pre|
-      pre.replace Net::HTTP.post_form(URI.parse('http://pygments-1-4.appspot.com/'),
-                                      {'lang'=>pre[:lang], 'code'=>pre.text.strip}).body
+
+  #
+  # Really slow
+  #
+  class HTMLwithRemotePygments < Redcarpet::Render::HTML
+    def block_code(code, language)
+      Net::HTTP.post_form(URI.parse('http://pygments-1-4.appspot.com/'),
+                          {'lang'=>language, 'code'=>code}).body
     end
-    doc.css('body > *').to_s
   end
 
-  def markdown(text, options = {})
+  class HTMLwithPygmentizeGem < Redcarpet::Render::HTML
+    def block_code(code, language)
+      puts "block_code"*10
+      puts language
+      puts code
+      Pygmentize.process(code, language.to_sym)
+    end
+  end
+
+  class HTMLwithSyntaxHighlighter < Redcarpet::Render::HTML
+    def block_code(code, language)
+      code.gsub!('<', '$lt;')
+      code.replace("<pre class='brush: #{language}'>#{code}</pre>")
+    end
+  end
+
+
+  def markdown(text, options = nil)
     options ||= {
       :hard_wrap => true,
       :filter_html => true,
       :autolink => true,
-      :no_intraemphasis => true,
-      :fenced_code => true,
-      :gh_blockcode => true,
+      :strikethrough => true,
+      :no_intra_emphasis => true,
+      :no_styles => true,
+      :fenced_code_blocks => true
+
     }
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, options)
-    syntax_highlighter(markdown.render(text))
+    puts "options?"*90
+    puts options
+    markdown = Redcarpet::Markdown.new(HTMLwithSyntaxHighlighter, options)
+    #syntax_highlighter(markdown.render(text))
+    markdown.render(text)
   end
+
+
+
 end

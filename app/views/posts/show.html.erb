@@ -1,3 +1,8 @@
+<% if current_user %>
+<div class="r post_options">
+<%= link_to 'Edit', edit_post_path(@post) %>
+</div>
+<% end %>
 <%= render :partial => 'post', :object => @post %>
 
 <section class="comments">
@@ -30,8 +35,10 @@
 
   <% end %>
 
+  <% if @comments.count > 0 %>
   <div class="comment_list">
   <%= render :partial => "comments/comment", :collection => @comments %>
   </div>
+  <% end %>
 
 </section>
