@@ -1,11 +1,3 @@
-GIT
-  remote: git://github.com/alindeman/no_peeping_toms.git
-  revision: 83dbd4cb993ae8e78a38a0f5cad784ca58bb0dcd
-  specs:
-    no_peeping_toms (2.1.0)
-      activerecord (>= 3.0.0)
-      activesupport (>= 3.0.0)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -137,6 +129,9 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     multi_json (1.0.4)
+    no_peeping_toms (2.1.2)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
     nokogiri (1.5.0)
     open4 (1.3.0)
     orm_adapter (0.0.5)
@@ -294,7 +289,7 @@ DEPENDENCIES
   jammit
   jasmine
   json (>= 1.4.6)
-  no_peeping_toms!
+  no_peeping_toms
   nokogiri
   pg (>= 0.10.0)
   pygmentize

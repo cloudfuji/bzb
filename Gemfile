@@ -56,7 +56,7 @@ group :development, :test do
   gem 'email_spec'
   gem 'jasmine'
   gem 'ci_reporter'
-  gem 'no_peeping_toms', :git => 'git://github.com/alindeman/no_peeping_toms.git'
+  gem 'no_peeping_toms'
   gem 'watchr'
   gem 'tane'
 end
