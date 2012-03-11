@@ -8,7 +8,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 # User/auth gems
 gem 'devise'
-gem 'devise_bushido_authenticatable', :git => 'git://github.com/Bushido/devise_cas_authenticatable.git'
+gem 'devise_bushido_authenticatable'
 gem 'cancan'
 
 # Background workers
@@ -21,7 +21,7 @@ gem 'rest-client'
 gem 'aws-s3'
 
 # Misc. gems
-gem 'bushido', :git => "git://github.com/Bushido/bushidogem.git"
+gem 'bushido'
 gem 'uuid'
 gem 'awesome_print'
 

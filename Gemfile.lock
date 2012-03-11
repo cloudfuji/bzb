@@ -1,22 +1,4 @@
 GIT
-  remote: git://github.com/Bushido/bushidogem.git
-  revision: 9f90c0cd4cf40ef001f68cceef93ec5049741cbe
-  specs:
-    bushido (0.0.35)
-      highline (>= 1.6.1)
-      json (>= 1.4.6)
-      orm_adapter (~> 0.0.3)
-      rest-client (>= 1.6.1)
-
-GIT
-  remote: git://github.com/Bushido/devise_cas_authenticatable.git
-  revision: fd4fd546ed51016f51d0b994c3dea792faa34bf7
-  specs:
-    devise_bushido_authenticatable (1.0.0)
-      devise (>= 1.0.6)
-      rubycas-client (>= 2.2.1)
-
-GIT
   remote: git://github.com/alindeman/no_peeping_toms.git
   revision: 83dbd4cb993ae8e78a38a0f5cad784ca58bb0dcd
   specs:
@@ -73,6 +55,11 @@ GEM
       xml-simple
     bcrypt-ruby (3.0.1)
     builder (2.1.2)
+    bushido (0.0.36)
+      highline (>= 1.6.1)
+      json (>= 1.4.6)
+      orm_adapter (~> 0.0.3)
+      rest-client (>= 1.6.1)
     cancan (1.6.7)
     capybara (1.1.2)
       mime-types (>= 1.16)
@@ -106,6 +93,9 @@ GEM
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.3)
       warden (~> 1.1)
+    devise_bushido_authenticatable (1.0.3)
+      devise (= 1.5.3)
+      rubycas-client (>= 2.2.1)
     diff-lcs (1.1.3)
     email_spec (1.2.1)
       mail (~> 2.2)
@@ -286,7 +276,7 @@ DEPENDENCIES
   autotest-rails
   awesome_print
   aws-s3
-  bushido!
+  bushido
   cancan
   capybara
   capybara-webkit
@@ -296,7 +286,7 @@ DEPENDENCIES
   compass-colors
   cover_me (>= 1.0.0.rc6)
   devise
-  devise_bushido_authenticatable!
+  devise_bushido_authenticatable
   email_spec
   factory_girl_rails
   fancy-buttons
